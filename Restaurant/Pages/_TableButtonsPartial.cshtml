@@ -1,0 +1,33 @@
+﻿@model Data.IndividualButtonPartial
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<td style="width:150px">
+    <div class="btn-group" role="group">
+        @Html.Partial("_IndividualButtonPartial",
+              new IndividualButtonPartial
+              {
+                  Page = "Edit",
+                  ButtonType = "btn-primary",
+                  Glyphicon = "pencil",
+                  Id = Model.Id
+              })
+        @Html.Partial("_IndividualButtonPartial",
+              new IndividualButtonPartial
+              {
+                  Page = "Details",
+                  ButtonType = "btn-success",
+                  Glyphicon = "list",
+                  Id = Model.Id
+              })
+        @Html.Partial("_IndividualButtonPartial",
+             new IndividualButtonPartial
+             {
+                 Page = "Delete",
+                 ButtonType = "btn-danger",
+                 Glyphicon = "trash",
+                 Id = Model.Id
+             })
+    </div>
+</td>

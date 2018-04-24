@@ -1,0 +1,44 @@
+﻿@page
+@model Restaurant.Pages.CategoryTypes.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<br />
+<h2>Create Category Type</h2>
+<hr />
+
+
+    <div class="form-border">
+        <fieldset disabled>
+            <div class="form-group">
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label asp-for="CategoryType.Name" class="custom-label"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="CategoryType.Name" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label asp-for="CategoryType.DisplayOrder" class="custom-label"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="CategoryType.DisplayOrder" class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br />
+        <div class="form-group">
+            <a asp-page="Edit" asp-route-id="@Model.CategoryType.Id" class="btn btn-sm btn-primary">Edit</a>
+            <a asp-page="Index" class="btn btn-sm btn-success">Black to List</a>
+        </div>
+    </div>
+
+
+
+
