@@ -1,0 +1,31 @@
+﻿@page
+@model Restaurant.Pages.FoodTypes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<br />
+<h2>Details Category Type</h2>
+<hr />
+
+
+<div class="form-border">
+    <fieldset disabled>
+        <div class="form-group">
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <label asp-for="FoodType.Name" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="FoodType.Name" class="form-control" />
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <br />
+    <div class="form-group">
+        <a asp-page="Edit" asp-route-id="@Model.FoodType.Id" class="btn btn-sm btn-primary">Edit</a>
+        <a asp-page="Index" class="btn btn-sm btn-success">Black to List</a>
+    </div>
+</div>

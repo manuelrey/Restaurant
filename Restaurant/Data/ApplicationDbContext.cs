@@ -15,6 +15,7 @@ namespace Restaurant.Data
         }
 
         public DbSet<CategoryType> CategoryType { get; set; }
+        public DbSet<FoodType> FoodTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
