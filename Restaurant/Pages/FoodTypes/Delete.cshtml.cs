@@ -28,7 +28,7 @@ namespace Restaurant.Pages.FoodTypes
                 return NotFound();
             }
 
-            FoodType = await _context.FoodTypes.SingleOrDefaultAsync(m => m.Id == id);
+            FoodType = await _context.FoodType.SingleOrDefaultAsync(m => m.Id == id);
 
             if (FoodType == null)
             {
@@ -44,11 +44,11 @@ namespace Restaurant.Pages.FoodTypes
                 return NotFound();
             }
 
-            FoodType = await _context.FoodTypes.FindAsync(id);
+            FoodType = await _context.FoodType.FindAsync(id);
 
             if (FoodType != null)
             {
-                _context.FoodTypes.Remove(FoodType);
+                _context.FoodType.Remove(FoodType);
                 await _context.SaveChangesAsync();
             }
 

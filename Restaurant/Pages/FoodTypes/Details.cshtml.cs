@@ -27,7 +27,7 @@ namespace Restaurant.Pages.FoodTypes
                 return NotFound();
             }
 
-            FoodType = await _context.FoodTypes.SingleOrDefaultAsync(m => m.Id == id);
+            FoodType = await _context.FoodType.SingleOrDefaultAsync(m => m.Id == id);
 
             if (FoodType == null)
             {

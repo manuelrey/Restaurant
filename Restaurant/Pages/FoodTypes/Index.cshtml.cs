@@ -22,7 +22,7 @@ namespace Restaurant.Pages.FoodTypes
 
         public async Task OnGetAsync()
         {
-            FoodType = await _context.FoodTypes.ToListAsync();
+            FoodType = await _context.FoodType.ToListAsync();
         }
     }
 }

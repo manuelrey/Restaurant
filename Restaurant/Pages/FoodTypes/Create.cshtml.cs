@@ -33,7 +33,7 @@ namespace Restaurant.Pages.FoodTypes
                 return Page();
             }
 
-            _context.FoodTypes.Add(FoodType);
+            _context.FoodType.Add(FoodType);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
