@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Restaurant.Data;
 using Restaurant.Services;
+using Restaurant.Utility;
 
 namespace Restaurant
 {
@@ -39,6 +40,11 @@ namespace Restaurant
                     options.Conventions.AuthorizeFolder("/Account/Manage");
                     options.Conventions.AuthorizePage("/Account/Logout");
                 });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(SD.AdminEndUser, policy => policy.RequireRole(SD.AdminEndUser));
+            });
 
             // Register no-op EmailSender used by account confirmation and password reset during development
             // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=532713
